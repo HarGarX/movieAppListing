@@ -16,13 +16,15 @@ class MovieWidget extends GetView<WatchController> {
     return GestureDetector(
       onTap: (() => Get.toNamed(Routes.SINGLE_MOVIE, arguments: [movieModel])),
       child: Card(
-        color: Colors.redAccent,
+        color: Color(0xffEFEFEF),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: Container(
-          height: 24.3.h,
-          width: 94.0.w,
+          height: MediaQuery.of(context).orientation == Orientation.portrait
+              ? MediaQuery.of(context).size.height * 0.243
+              : 50.h,
+          width: MediaQuery.of(context).size.width * 0.94,
           decoration: BoxDecoration(
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(15.0),

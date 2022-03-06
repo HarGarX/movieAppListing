@@ -6,6 +6,7 @@ class SingleMovieController extends GetxController {
   final MovieModel movieModel = Get.arguments[0];
   final MovieService movieService = Get.find();
   final isLoading = false.obs;
+  final isLandscape = false.obs;
 
   @override
   void onInit() async {

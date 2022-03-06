@@ -73,8 +73,10 @@ class BottomNavBarView extends GetView<BottomNavBarController> {
         screens: _buildScreens(),
         items: _navBarsItems(),
         confineInSafeArea: true,
-        navBarHeight: 100.h *
-            0.10, // 738 Screen Height in Figma & 75 Nav Tabs Height === %10 FROM Screen
+        navBarHeight: MediaQuery.of(context).orientation == Orientation.portrait
+            ? 100.h * 0.10
+            : 100.h *
+                0.2, // 738 Screen Height in Figma & 75 Nav Tabs Height === %10 FROM Screen
         backgroundColor: Color(0xFF2E2739),
         // padding: NavBarPadding.all(0.0),
         handleAndroidBackButtonPress: true,
