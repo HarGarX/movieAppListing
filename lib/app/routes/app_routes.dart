@@ -11,6 +11,7 @@ abstract class Routes {
   static const SINGLE_MOVIE = _Paths.SINGLE_MOVIE;
   static const WATCH_TRAILER = _Paths.WATCH_TRAILER;
   static const BOOK_TICKET = _Paths.BOOK_TICKET;
+  static const PAY_TICKET = _Paths.PAY_TICKET;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const SINGLE_MOVIE = '/single-movie';
   static const WATCH_TRAILER = '/watch-trailer';
   static const BOOK_TICKET = '/book-ticket';
+  static const PAY_TICKET = '/pay-ticket';
 }

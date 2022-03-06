@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:movielistapp/app/modules/book_ticket/widgets/cienma_seat.dart';
+import 'package:movielistapp/app/routes/app_pages.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../controllers/book_ticket_controller.dart';
@@ -190,10 +192,647 @@ class BookTicketView extends GetView<BookTicketController> {
                   ),
                 ).paddingOnly(left: 4.0.w, top: 0.0.w),
               ),
+              // SliverToBoxAdapter(
+              //   child: Center(
+              //       child: Image.asset(
+              //     'assets/images/screen.png',
+              //     width: 80.w,
+              //   )),
+              // ),
+              SliverToBoxAdapter(
+                child: Container(
+                  height: 50.0.h,
+                  width: 10.w,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 4,
+                    shrinkWrap: true,
+                    itemBuilder: ((context, index) {
+                      return Padding(
+                        padding:
+                            const EdgeInsets.all(5.0).copyWith(bottom: 10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            // First Seat Row
+
+                            SizedBox(
+                              height: 50.0,
+                            ),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '12:30',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xff202C43),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10.0,
+                                  ),
+                                  Text(
+                                    'Cinetech + hall 1',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xff8F8F8F),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ).paddingAll(10.0),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Get.toNamed(Routes.PAY_TICKET, arguments: [
+                                  bookTicketController.movieModel
+                                ]);
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.all(15.0),
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color(0xff61C3F2), width: 1.0),
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Center(
+                                      child: Image.asset(
+                                        'assets/images/screen.png',
+                                        width: 80.w,
+                                      ),
+                                    ),
+                                    Text(
+                                      'screen',
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 14.sp,
+                                        fontWeight: FontWeight.w300,
+                                        color: Color(0xff202C43),
+                                      ),
+                                    ),
+                                    // First Seat Row
+                                    SeatsFirstRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    // Second Row
+                                    SeatsSecondRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    SeatsSecondRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    SeatsSecondRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    // ThirdRow
+                                    SeatsThirdRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    SeatsThirdRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    SeatsThirdRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    SeatsThirdRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    SeatsThirdRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                    SeatsThirdRow(
+                                      marginHorizontal: 6.0,
+                                      marinVertical: 3.0,
+                                      containerHeight: 3.0,
+                                      containerWidth: 3.0,
+                                      iconSize: 5.0,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Align(
+                              // alignment: Alignment.centerLeft,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'From',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w300,
+                                      color: Color(0xff202C43),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Text(
+                                    '${index * 50 + 25}\$',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xff202C43),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Text(
+                                    'or',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w300,
+                                      color: Color(0xff202C43),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Text(
+                                    '2500 bonus',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xff202C43),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ).paddingAll(10.0),
+                          ],
+                        ),
+                      );
+                    }),
+                  ),
+                ),
+              ),
             ],
           ),
         );
       },
+    );
+  }
+}
+
+class SeatsThirdRow extends StatelessWidget {
+  final double marginHorizontal;
+  final double marinVertical;
+  final double containerWidth;
+  final double containerHeight;
+  final double iconSize;
+  const SeatsThirdRow({
+    Key? key,
+    required this.marginHorizontal,
+    required this.marinVertical,
+    required this.containerWidth,
+    required this.containerHeight,
+    required this.iconSize,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        SizedBox(width: 2.w),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(
+          width: 3.w,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(width: 3.w),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(width: 2.w),
+      ],
+    );
+  }
+}
+
+class SeatsSecondRow extends StatelessWidget {
+  final double marginHorizontal;
+  final double marinVertical;
+  final double containerWidth;
+  final double containerHeight;
+  final double iconSize;
+  const SeatsSecondRow({
+    Key? key,
+    required this.marginHorizontal,
+    required this.marinVertical,
+    required this.containerWidth,
+    required this.containerHeight,
+    required this.iconSize,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        SizedBox(width: 2.w),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(
+          width: 3.w,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(width: 3.w),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(width: 2.w),
+      ],
+    );
+  }
+}
+
+class SeatsFirstRow extends StatelessWidget {
+  final double marginHorizontal;
+  final double marinVertical;
+  final double containerWidth;
+  final double containerHeight;
+  final double iconSize;
+  const SeatsFirstRow({
+    Key? key,
+    required this.marginHorizontal,
+    required this.marinVertical,
+    required this.containerWidth,
+    required this.containerHeight,
+    required this.iconSize,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        SizedBox(width: 2.w),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(
+          width: 3.w,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(width: 3.w),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        CienmaSeat(
+          marginHorizontal: marginHorizontal,
+          marinVertical: marinVertical,
+          containerHeight: containerWidth,
+          containerWidth: containerHeight,
+          iconSize: iconSize,
+        ),
+        SizedBox(width: 2.w),
+      ],
     );
   }
 }

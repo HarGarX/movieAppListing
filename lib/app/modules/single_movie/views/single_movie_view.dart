@@ -17,8 +17,9 @@ class SingleMovieView extends GetView<SingleMovieController> {
       initState: (singleMovieController) {},
       builder: (singleMovieController) {
         return Scaffold(
-          //1
+          //
           body: CustomScrollView(
+            scrollDirection: Axis.vertical,
             slivers: <Widget>[
               SliverAppBar(
                 expandedHeight: 60.0.h,

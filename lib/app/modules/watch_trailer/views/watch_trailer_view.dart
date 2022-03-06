@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../controllers/watch_trailer_controller.dart';
@@ -49,6 +51,20 @@ class WatchTrailerView extends GetView<WatchTrailerController> {
                               color: Colors.white,
                             ),
                           ),
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: GestureDetector(
+                                onTap: (() {
+                                  Get.back();
+                                }),
+                                child: Text(
+                                  'Done',
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                          )
                         ],
                         controller:
                             watchTrailerController.youtubePlayerController,

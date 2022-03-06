@@ -6,6 +6,8 @@ import 'package:movielistapp/app/modules/bottom_nav_bar/bindings/bottom_nav_bar_
 import 'package:movielistapp/app/modules/bottom_nav_bar/views/bottom_nav_bar_view.dart';
 import 'package:movielistapp/app/modules/home/bindings/home_binding.dart';
 import 'package:movielistapp/app/modules/home/views/home_view.dart';
+import 'package:movielistapp/app/modules/pay_ticket/bindings/pay_ticket_binding.dart';
+import 'package:movielistapp/app/modules/pay_ticket/views/pay_ticket_view.dart';
 import 'package:movielistapp/app/modules/search_result/bindings/search_result_binding.dart';
 import 'package:movielistapp/app/modules/search_result/views/search_result_view.dart';
 import 'package:movielistapp/app/modules/single_movie/bindings/single_movie_binding.dart';
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.BOOK_TICKET,
       page: () => BookTicketView(),
       binding: BookTicketBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAY_TICKET,
+      page: () => PayTicketView(),
+      binding: PayTicketBinding(),
     ),
   ];
 }
